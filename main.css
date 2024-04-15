@@ -1,5 +1,9 @@
 body {
     margin: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-use-select: none;
 }
 * {
     box-sizing: border-box;
@@ -16,13 +20,16 @@ body {
 .calc-wrapper > .calc {
     padding: 20px;
 }
-.calc-wrapper > .calc div.input {
-    height: 100px;
+.calc-wrapper > .calc .display {
+    height: 96px;
     margin-bottom: 20px;
     background-color: darkgray;
     border-radius: 12px;
+    text-align: right;
+    font-size: 50px;
+    padding: 15px; 
 }
-.btn-group > div {
+.btn-group > .btn-row {
     display: flex;
     gap: 10px;
 }
@@ -38,7 +45,6 @@ body {
     font-size: 2rem;
     background-color: #fff;
     border: none;
-    cursor: pointer;
 }
 .btn-group button:hover {
     scale: 1.1;
